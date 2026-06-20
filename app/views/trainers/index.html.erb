@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Trainers</h1>
+  <% @trainers.each do |trainer| %>
+    <div>
+      <%= link_to trainer do  %>
+        <h2><%= trainer.name %></h2>
+        <p><%= trainer.age %></p>
+        <%= cl_image_tag trainer.photo.key  %>
+      <% end %>
+    </div>
+  <% end %>
+
+</div>
